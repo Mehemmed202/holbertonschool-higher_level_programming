@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 #comment
-print('holbertonschool-higher_level_programming')
+print('"Programming is like building a multilingual puzzle')
