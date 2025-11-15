@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/python3
 #comment
 print('holbertonschool-higher_level_programming')
