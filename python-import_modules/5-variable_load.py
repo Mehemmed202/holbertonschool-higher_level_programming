@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    a = 89
-    import variable_load_5
+    from variable_load_5 import a
     a = -100
     print(a)
