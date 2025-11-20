@@ -7,4 +7,4 @@ def multiple_returns(sentence):
         first = sentence[0]
     else:
         first = None
-        return (c, first)
+    return (c, first)
