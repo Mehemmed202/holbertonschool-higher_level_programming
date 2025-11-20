@@ -9,4 +9,5 @@ def square_matrix_simple(matrix=[]):
             mlist.append(i * i)
         new_matrix.append(mlist)
 
-    print(new_matrix, my_matrix, end = "\n")
+    print(new_matrix)
+    print(my_matrix)
