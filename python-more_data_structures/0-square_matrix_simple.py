@@ -9,4 +9,4 @@ def square_matrix_simple(matrix=[]):
             mlist.append(i * i)
         new_matrix.append(mlist)
 
-    retuen new_matrix
+    return new_matrix
