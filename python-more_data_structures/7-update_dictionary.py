@@ -4,4 +4,4 @@ def update_dictionary(a_dictionary, key, value):
     a_dictionary.update({key : value})
     dct = sorted(a_dictionary.keys())
     for i in dct:
-        print("{}: {}".format(key, a_dictionary[key]))
+        return a_dictionary
