@@ -4,4 +4,6 @@ def best_score(a_dictionary):
     for i in a_dictionary.keys():
         if a_dictionary[i] > k:
             k = a_dictionary[i]
-    return k
+    for j in a_dictionary:
+        if k == a_dictionary[j]:
+            return j
