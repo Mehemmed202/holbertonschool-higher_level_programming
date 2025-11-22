@@ -5,7 +5,7 @@ def safe_print_list_integers(my_list=[], x=0):
     try:
         for i in range(x):
             c = c + 1
-            k.append(mylist[i])
+            k.append(my_list[i])
             print("{:d}".format("".join(k)))
             print(c)
     except (IndexError, TypeError):
