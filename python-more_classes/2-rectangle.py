@@ -19,6 +19,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
+
     @property
     def height(self):
         return self.__height
@@ -37,5 +38,5 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             perimeter = 0
         else:
-            perimeter = 2 * (self.__width +self.__height)
+            perimeter = 2 * (self.__width + self.__height)
         return perimeter
