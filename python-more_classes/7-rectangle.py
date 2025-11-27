@@ -50,7 +50,7 @@ class Rectangle:
             return ""
         else:
             for i in range(self.__height):
-                s = s + self.__width * print_symbol
+                s = s + self.__width * Rectangle.print_symbol
                 if i != self.__height:
                     s = s + "\n"
 
