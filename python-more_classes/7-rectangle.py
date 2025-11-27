@@ -23,6 +23,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
+        self.__width = value
 
     @property
     def height(self):
@@ -34,6 +35,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
+        self.__height = value
 
     def area(self):
         return (self._width * self.__height)
@@ -48,12 +50,9 @@ class Rectangle:
         s = ""
         if self.__width == 0 or self.__height == 0:
             return ""
-        else:
-            for i in range(self.__height):
-                s = s + self.__width * Rectangle.print_symbol
-                if i != self.__height:
-                    s = s + "\n"
-        return s
+        sy = getattr(self, "print_symbol", Rectangle.print_symbol)
+        lines = [str(sy) * self.__width for _ in range(self.__height)]
+        return "\n".join(lines)
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
