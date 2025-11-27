@@ -33,13 +33,12 @@ class Rectangle:
 
     def area(self):
         return (self._width * self.__height)
-    
+
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
-            return""
+            return ""
         else:
             perimeter = 2 * (self.__width + self.__height)
-
 
     def __str__(self):    
         s = ""
