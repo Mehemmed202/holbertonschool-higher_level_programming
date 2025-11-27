@@ -42,15 +42,14 @@ class Rectangle:
         return perimeter
 
     def __str__(self):
+        c = ""
         if self.__height == 0 or self.__width == 0:
             print()
         else:
             for i in range(self.__height):
-                print(self.__width * "#")
+                c = c + self.__width * "#"
                 if i != self.__height - 1:
-                    print()
-                else:
-                    print("")
+                    s = s + "\n"
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
