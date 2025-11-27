@@ -67,3 +67,5 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_1, Rectangle):
             raise ValueError("rect_2 must be an instance of Rectangle")
+        if rect_1 == rect_2:
+            return rect_1
