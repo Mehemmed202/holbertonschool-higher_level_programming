@@ -9,7 +9,7 @@ class Rectangle:
         self.width = width
         self.height = height
 
-    @propety
+    @property
     def width(self):
         return self.__width
 
@@ -34,5 +34,5 @@ class Rectangle:
         if width == 0 or height == 0:
             perimeter = 0
         else:
-            perimeter  = 2 * (width + height)
+            perimeter = 2 * (width + height)
         return perimeter
