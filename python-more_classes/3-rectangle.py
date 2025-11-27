@@ -45,7 +45,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             print(str())
         else:
-        for i in range(self.__height):
-            print(self.__width * "#")
-            if i != self.__height - 1:
-                print()
+            for i in range(self.__height):
+                print(self.__width * "#")
+                if i != self.__height - 1:
+                    print()
