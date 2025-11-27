@@ -44,12 +44,13 @@ class Rectangle:
     def __str__(self):
         c = ""
         if self.__height == 0 or self.__width == 0:
-            print()
+            return ""
         else:
             for i in range(self.__height):
                 c = c + self.__width * "#"
                 if i != self.__height - 1:
-                    s = s + "\n"
+                    c = c + "\n"
+        return c
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
