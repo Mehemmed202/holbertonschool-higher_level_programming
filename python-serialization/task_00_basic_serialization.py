@@ -7,7 +7,7 @@ import json
 
 def serialize_and_save_to_file(data, filename):
     # Your code here to serialize and save data to the specified file
-    with open(filename, "r", encoding="UTF-8") as f:
+    with open(filename, "w", encoding="UTF-8") as f:
         return json.dump(data, f)
 
 def load_and_deserialize(filename):
