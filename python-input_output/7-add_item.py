@@ -15,4 +15,5 @@ try:
 except:
     items = []
 
-return items
+items.extend(sys.argv[1:])
+print(items)
