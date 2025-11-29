@@ -2,7 +2,7 @@
 """a"""
 
 
-BaseGeometry = __iport__('7-base_geometry.py').BaseGeometry
+BaseGeometry = __import__('7-base_geometry.py').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
