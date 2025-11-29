@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""a"""
+"""CustomObject with pickle serialization"""
 
 
-import json
 import pickle
 
-class CustomObject:
-    """a"""
 
+class CustomObject:
+    """Custom object for serialization"""
 
     def __init__(self, name, age, is_student):
         self.name = name
@@ -15,16 +14,22 @@ class CustomObject:
         self.is_student = is_student
 
     def display(self):
-        for k, v in self.__dict__.items():
-            i = "{}: {}".format(k, v)
-            print(i.capitalize())
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Is Student: {self.is_student}")
 
     def serialize(self, filename):
-        with open(filename, "w", encoding="UTF-8") as f:
-            return pickle.dump(self, f)
-    
+        try:
+            with open(filename, "wb") as f:
+                pickle.dump(self, f)
+        except Exception:
+            return None
+
     @classmethod
     def deserialize(cls, filename):
-        with open(filename, "r", encoding="UTF-8") as fl:
-            data = pickle.load(fl)
-        return cls(**data)
+        try:
+            with open(filename, "rb") as f:
+                obj = pickle.load(f)
+            return obj
+        except (FileNotFoundError, Exception):
+            return None
