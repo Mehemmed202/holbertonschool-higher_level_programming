@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+"""
+BaseGeometry class with doctest examples.
+
+>>> from __main__ import BaseGeometry
+>>> bg = BaseGeometry()
+>>> try:
+...     bg.area()
+... except Exception as e:
+...     print(e)
+area() is not implemented
+>>> try:
+...     bg.integer_validator("height", "10")
+... except Exception as e:
+...     print(e)
+<name> must be an integer
+>>> try:
+...     bg.integer_validator("width", -5)
+... except Exception as e:
+...     print(e)
+<name> must be greater than 0
+>>> bg.integer_validator("size", 3)  # no output, valid integer
+"""
+
