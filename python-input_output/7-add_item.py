@@ -16,4 +16,4 @@ except FileNotFoundError:
     items = []
 
 items.extend(sys.argv[1:])
-print(items)
+save_to_json_file(items, filename)
