@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Student class with serialization/deserialization."""
 
+
 class Student:
     """Represents a student."""
 
