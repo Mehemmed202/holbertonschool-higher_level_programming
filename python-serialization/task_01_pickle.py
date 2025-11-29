@@ -19,12 +19,12 @@ class CustomObject:
             i = "{}: {}".format(k, v)
             print(i.capitalize())
 
-    serialize(self, filename):
+    def serialize(self, filename):
         with open(filename, "w", encoding="UTF-8") as f:
             return pickle.dump(self, f)
     
     @classmethod
-    deserialize(cls, filename):
+    def deserialize(cls, filename):
         with open(filename, "r", encoding="UTF-8") as fl:
             data = pickle.load(fl)
         return cls(**data)
