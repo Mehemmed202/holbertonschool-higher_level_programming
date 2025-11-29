@@ -16,4 +16,4 @@ except:
     items = []
 
 items.extend(sys.argv[1:])
-print(items)
+print(items, filename)
