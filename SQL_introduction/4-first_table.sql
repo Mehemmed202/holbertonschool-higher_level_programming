@@ -1,2 +1,5 @@
 -- 4-first_table.sql
-CREATE TABLE first_table(id, name);
+CREATE TABLE IF NOT EXISTS first_table(
+	id INT,
+	name VARCHAR(256)
+);
