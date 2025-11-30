@@ -1,2 +1,2 @@
 -- 5-full_table.sql
-DESCRIBE first_table FROM hbtn_0c_0;
+show CREATE table  first_table 
