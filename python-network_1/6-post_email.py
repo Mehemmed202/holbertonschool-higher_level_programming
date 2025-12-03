@@ -10,4 +10,4 @@ if __name__ == "__main__":
     payload = {"email": email}
 
     response = requests.post(url, json=payload)
-    print("Your email is: {}".format(response.text))
+    print(response.text)
