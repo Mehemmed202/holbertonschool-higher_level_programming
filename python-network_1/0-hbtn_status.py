@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#comment
+"""a"""
 
 import urllib.request
 
