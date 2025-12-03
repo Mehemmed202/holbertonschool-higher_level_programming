@@ -5,7 +5,7 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    url = "https://www.github.com/user"
+    url = "https://api.github.com/user"
     user = sys.argv[1]
     paswd = sys.argv[2]
     response = requests.get(url, auth=(user, paswd))
