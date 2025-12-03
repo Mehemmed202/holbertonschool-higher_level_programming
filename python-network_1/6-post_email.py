@@ -9,5 +9,5 @@ if __name__ == "__main__":
     email = sys.argv[2]
     payload = {"email": email}
 
-    response = request.post(url, json=payload)
+    response = requests.post(url, json=payload)
     print("Your email is: {}".format(response.text))
