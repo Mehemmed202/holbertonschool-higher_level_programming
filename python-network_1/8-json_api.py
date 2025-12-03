@@ -15,13 +15,13 @@ if __name__ == "__main__":
     response = requests.post(url, data=payload)
 
     try:
-        json_response  =response.json()
+        json_response = response.json()
 
         if json_response:
             print("[{}] {}".format(json_response.get('id'),
                                    json_response.get('name')))
         else:
             print("No result")
-        
+
     except ValueError:
         print("Not a valid JSON")
