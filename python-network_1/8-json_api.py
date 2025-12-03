@@ -12,7 +12,7 @@ if __name__ == "__main__":
         key = ""
 
     payload = {"q": key}
-    response = requests.post(url, json=payload)
+    response = requests.post(url, data=payload)
 
     try:
         json_response  =response.json()
@@ -25,5 +25,3 @@ if __name__ == "__main__":
         
     except ValueError:
         print("Not a valid JSON")
-
-
