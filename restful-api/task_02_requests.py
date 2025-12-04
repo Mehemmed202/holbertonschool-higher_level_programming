@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-"""a"""
-
 import requests
 
 if __name__ == "__main__":
