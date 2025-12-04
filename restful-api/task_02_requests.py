@@ -38,4 +38,4 @@ def fetch_and_save_posts():
         with open("posts.csv","w", newline="", encoding="utf-8") as csv_file:
             writer = csv.DictWriter(csv_file, fieldnames=["id", "tittle", "body"])
             writer.writeheader()
-            write.writerows(cleaned_posts)
+            writer.writerows(cleaned_posts)
