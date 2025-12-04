@@ -6,5 +6,5 @@ import requests
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/posts"
     response = requests.get(url)
-    print(url.status_code)
-    print(url.json())
+    print(response.status_code)
+    print(response.json())
