@@ -29,7 +29,7 @@ def fetch_and_save_posts():
         cleaned_posts = [
             {
                 "id": post["id"],
-                "title": post["title"],
+                "tittle": post["tittle"],
                 "body": post["body"]
             }
             for post in posts
