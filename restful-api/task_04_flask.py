@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from flask import Flask, jsonify, requests
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 users = {}
@@ -26,7 +26,7 @@ def get_user():
 
 @app.route("/add_user", methods = ["POST"])
 def add_user():
-    data = requests.get_json(silent=True)
+    data = request.get_json(silent=True)
 
     if data is None:
         return jsonify({"error":"Invalid JSON"}), 400
