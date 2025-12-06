@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from flask import Flask, jsonify, reuest
+from flask import Flask, jsonify, requests
 
 app = Flask(__name__)
 users = {}
