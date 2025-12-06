@@ -5,7 +5,8 @@ from flask_httpauth import HTTPBasicAuth
 from flask_jwt_extended import (
         JWTManager,
         create_access_token,
-        get_jwt_identity
+        get_jwt_identity,
+        jwt_required
         )
 from werkzeug.security import generate_password_hash, check_password_hash
 
