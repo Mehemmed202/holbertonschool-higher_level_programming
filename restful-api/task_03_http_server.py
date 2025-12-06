@@ -8,9 +8,9 @@ class SimpleHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
             self.send_response(200)
-            self.send_header("Content-type", "text/plain")
+            self.send_headers("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write("Hello, this is a simple API")
+            self.wfile.write(b"Hello, this is a simple API")
         elif self.path == "/data":
             self.send_response(200)
             self.send_header("Content-type", "application/json")
@@ -19,14 +19,14 @@ class SimpleHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(data).encode('utf-8'))
         elif self.path == "/status":
             self.send_response(200)
-            self.send_header("Content-type", "text/plain")
+            self.send_headers("Content-type", "text/plain")
             self.end_header()
-            self.wfile.write("OK")
+            self.wfile.write(b"OK")
         else:
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
-            self.end_header()
-            self.wfile.write("Endpoint not found")
+            self.end_headers()
+            self.wfile.write(b"Endpoint not found")
 
 # serverin qurulmasi ve ise salinmasi
 if __name__ == "__main__":
