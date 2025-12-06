@@ -8,7 +8,7 @@ class SimpleHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
             self.send_response(200)
-            self.send_headers("Content-type", "text/plain")
+            self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Hello, this is a simple API")
         elif self.path == "/data":
@@ -19,8 +19,8 @@ class SimpleHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(data).encode('utf-8'))
         elif self.path == "/status":
             self.send_response(200)
-            self.send_headers("Content-type", "text/plain")
-            self.end_header()
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
             self.wfile.write(b"OK")
         else:
             self.send_response(404)
