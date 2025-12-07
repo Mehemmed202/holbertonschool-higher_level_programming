@@ -9,7 +9,7 @@ app = Flask(__name__)
 def items():
 
     with open("items.json", "r") as f:
-        data = json.loads(f)
+        data = json.load(f)
         items = data.get("items", [])
 
     return render_template("items.html", items=items)
