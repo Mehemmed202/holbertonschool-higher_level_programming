@@ -19,23 +19,22 @@ def generate_invitations(template, attendees):
         print("No data provided, no output files generated.")
         return
 
-    output_dir = "invites"
-    os.makedirs(output_dir, exist_ok=True)
 
     for index, attendee in enumerate(attendees, start=1):
         placeholder = ["name", "event_title", "event_date", "event_location"]
+        content = template
 
         for key in placeholder:
-            value = attendees.get(key)
+            value = attendee.get(key)
             if value is None:
                 value = "N/A"
 
-            content.replace("{" + key + "}", str(value))
+            content = content.replace("{" + key + "}", str(value))
 
         filename = f"output_{index}.txt"
 
         try:
-            with open("filename", "w", encoding="utf-8") as file:
+            with open(filename, "w", encoding="utf-8") as file:
                 file.write(content)
         except Exception as e:
             print(f"Error writing file {filename}: {e}")
