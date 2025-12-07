@@ -20,7 +20,7 @@ def generate_invitations(template, attendees):
         return
 
     for index, attendee in enumerate(attendees, start=1):
-    placeholder = ["name", "event_title", "event_date", "event_location"]
+        placeholder = ["name", "event_title", "event_date", "event_location"]
 
         for key in placeholder:
             value = attendees.get(key)
