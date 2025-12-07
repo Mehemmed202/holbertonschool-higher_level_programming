@@ -7,8 +7,8 @@ def generate_invitations(template, attendees):
         print("Template is invalid input type.")
         return
 
-    if not isinstance(attendees, dict):
-        print("Attendees is invalid input type.")
+    if not isinstance(attendees, list) or not all(isinstance(x, dict) for x in attendees):
+        print("Attendees must be a list of dicts")
         return
 
     if template.strip() == "":
