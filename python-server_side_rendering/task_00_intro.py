@@ -19,6 +19,9 @@ def generate_invitations(template, attendees):
         print("No data provided, no output files generated.")
         return
 
+    output_dir = "invites"
+    os.makedirs(output_dir, exist_ok=True)
+
     for index, attendee in enumerate(attendees, start=1):
         placeholder = ["name", "event_title", "event_date", "event_location"]
 
